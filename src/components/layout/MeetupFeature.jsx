@@ -3,9 +3,9 @@ import img from "../../assets/extra-img.png";
 
 const MeetupFeature = () => {
   return (
-    <div className="flex mx-5 flex-col lg:flex-row justify-center items-center lg:mt-24">
+    <div className="flex mx-5 flex-col lg:flex-row gap-8 lg:gap-0 justify-center items-center mt-12 lg:mt-24">
       <div className="flex-[1] flex flex-col justify-center items-center">
-        <h1 className="text-[#5352ED] text-4xl font-semibold mb-5">
+        <h1 className="text-[#5352ED] text-xl lg:text-4xl font-semibold mb-5">
           TEE’S LIBRARY MEETUP.
         </h1>
         <p className="dark:text-white">
@@ -14,7 +14,7 @@ const MeetupFeature = () => {
           New Book Every Month..
         </p>
 
-        <div className="flex gap-24 mt-20">
+        <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-24 mt-10 lg:mt-20">
           <div className="flex flex-col justify-start items-center text-center">
             <h2 className="mb-2 text-[#FF7F56] text-2xl font-semibold">1M+</h2>
             <h3 className="dark:text-white">

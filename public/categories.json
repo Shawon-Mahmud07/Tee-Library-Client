@@ -1,0 +1,22 @@
+[
+  {
+    "_id": 1,
+    "category": "Biographical",
+    "image_url": "https://img.freepik.com/premium-vector/biography-typography-book-related-word-text-effect-t-shirt-design_528151-1735.jpg"
+  },
+  {
+    "_id": 2,
+    "category": "Children's Books",
+    "image_url": "https://www.pre-kpages.com/wp-content/uploads/2017/07/books-repetitive-predictable-text-for-preschool.jpg"
+  },
+  {
+    "_id": 3,
+    "category": "Sports",
+    "image_url": "https://m.media-amazon.com/images/I/7130aVxIxiL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "_id": 4,
+    "category": "Science Fiction & Fantasy",
+    "image_url": "https://images.wsj.net/im-681331"
+  }
+]
