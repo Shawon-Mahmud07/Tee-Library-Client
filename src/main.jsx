@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("/brandCard.json"),
+        loader: () => fetch("http://localhost:5000/categories"),
       },
       {
         path: "/register",

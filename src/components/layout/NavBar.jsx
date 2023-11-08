@@ -121,7 +121,7 @@ const NavBar = () => {
     </ul>
   );
   return (
-    <Navbar className=" bg-transparent  rounded-none w-full max-w-[1440px] mx-auto shadow-none border-none py-2  dark:bg-[#0F172A]  ">
+    <Navbar className=" bg-transparent  rounded-none w-full max-w-[1440px] mx-auto shadow-none border-none py-4  dark:bg-[#0F172A]  ">
       <div className=" flex items-center justify-between ">
         <div className="-ml-6 mr-4 md:mr-0 md:-ml-0 ">
           <Link>
