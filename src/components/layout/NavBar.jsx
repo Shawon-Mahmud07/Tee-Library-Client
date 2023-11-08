@@ -24,7 +24,6 @@ const NavBar = () => {
 }; */
 
   // Dark Mood
-
   const [mood, setMood] = useState("light");
 
   const toggleTheme = () => {
@@ -122,12 +121,12 @@ const NavBar = () => {
     </ul>
   );
   return (
-    <Navbar className=" bg-transparent rounded-none container mx-auto shadow-none border-none py-2 dark:bg-[#0F172A]  ">
-      <div className=" flex items-center justify-between text-blue-gray-900">
+    <Navbar className=" bg-transparent  rounded-none w-full max-w-[1440px] mx-auto shadow-none border-none py-2  dark:bg-[#0F172A]  ">
+      <div className=" flex items-center justify-between ">
         <div className="-ml-6 mr-4 md:mr-0 md:-ml-0 ">
           <Link>
             <img
-              className="w-40 h-14 md:w-10/12 md:h-16 rounded-md"
+              className="w-40 h-11 md:w-10/12 md:h-16 rounded-md"
               src={logo}
               alt="nav-logo"
             />
@@ -184,7 +183,7 @@ const NavBar = () => {
 
         <IconButton
           variant="text"
-          className="ml-2 h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-[#FF7F56] dark:text-white"
+          className=" h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-[#FF7F56] dark:text-white"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >

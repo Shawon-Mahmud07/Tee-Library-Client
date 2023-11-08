@@ -1,9 +1,13 @@
 import Banner from "../components/layout/Banner";
+import Features from "../components/layout/Features";
+import MeetupFeature from "../components/layout/MeetupFeature";
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-full max-w-[1440px] mx-auto">
       <Banner></Banner>
+      <Features></Features>
+      <MeetupFeature></MeetupFeature>
     </div>
   );
 };
