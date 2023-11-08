@@ -5,33 +5,29 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-// import { HiShoppingCart, HiMoon, HiSun } from "react-icons/hi";
+import { HiMoon, HiSun } from "react-icons/hi";
 import { Link, NavLink } from "react-router-dom";
 // import userDefaultPicture from "../assets/Img/user.png";
 import logo from "../../assets/Logo.png";
-// import React, { useContext, useEffect, useState } from "react";
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 // import { AuthContext } from "../Providers/AuthProvider";
 const NavBar = () => {
   const [openNav, setOpenNav] = React.useState(false);
-  {
-    /* const { user, logOut } = useContext(AuthContext);
-  console.log(user); */
-  }
+  // {
+  //   const { user, logOut } = useContext(AuthContext);
+  // console.log(user);
+  // }
 
-  {
-    /* const handleLogOut = () => {
-    logOut();
-  }; */
-  }
+  /* const handleLogOut = () => {
+  logOut();
+}; */
 
   // Dark Mood
-  {
-    /* const [mood, setMood] = useState("light"); */
-  }
 
-  {
-    /* const toggleTheme = () => {
+  const [mood, setMood] = useState("light");
+
+  const toggleTheme = () => {
     const html = document.documentElement;
     if (mood === "light") {
       html.classList.remove("light");
@@ -45,12 +41,12 @@ const NavBar = () => {
       localStorage.setItem("mood", "light");
     }
   };
+
   useEffect(() => {
     const currentMood = localStorage.getItem("mood") || "light";
     document.documentElement.classList.add(currentMood);
     setMood(currentMood);
-  }, []); */
-  }
+  }, []);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -66,8 +62,8 @@ const NavBar = () => {
           to="/"
           className={({ isActive }) =>
             isActive
-              ? "flex items-center text-[#F04923] font-bold underline text-lg"
-              : "flex items-center text-[#706F6F] dark:text-white text-lg"
+              ? "flex items-center text-black font-bold underline text-lg dark:text-[#FF7F56]"
+              : "flex items-center text-[#00000080] dark:text-white text-lg"
           }
         >
           Home
@@ -75,59 +71,65 @@ const NavBar = () => {
       </Typography>
 
       <NavLink
-        to="/addProduct"
+        to="/add-books"
         className={({ isActive }) =>
           isActive
-            ? "flex items-center text-[#F04923] font-bold underline text-lg"
-            : "flex items-center text-[#706F6F] dark:text-white text-lg"
+            ? "flex items-center text-black dark:text-[#FF7F56] font-bold underline text-lg"
+            : "flex items-center text-[#00000080] dark:text-white text-lg"
         }
       >
-        Add Product
+        Add Books
+      </NavLink>
+      <NavLink
+        to="/all-books"
+        className={({ isActive }) =>
+          isActive
+            ? "flex items-center text-black dark:text-[#FF7F56] font-bold underline text-lg"
+            : "flex items-center text-[#00000080] dark:text-white text-lg"
+        }
+      >
+        All Books
+      </NavLink>
+
+      <NavLink
+        to="/borrowed-books"
+        className={({ isActive }) =>
+          isActive
+            ? "flex items-center text-black dark:text-[#FF7F56] font-bold underline text-lg"
+            : "flex items-center text-[#00000080] dark:text-white text-lg"
+        }
+      >
+        Borrowed Books
       </NavLink>
       <NavLink
         to="/register"
         className={({ isActive }) =>
           isActive
-            ? "flex items-center text-[#F04923] font-bold underline text-lg"
-            : "flex items-center text-[#706F6F] dark:text-white text-lg"
+            ? "flex items-center text-black dark:text-[#FF7F56] font-bold underline text-lg"
+            : "flex items-center text-[#00000080] dark:text-white text-lg"
         }
       >
         Register
       </NavLink>
-      {/* <NavLink
-        
-        to="/carts"
-        className={({ isActive }) =>
-          isActive
-            ? "flex items-center text-[#F04923] font-bold underline text-lg"
-            : "flex items-center text-[#706F6F] dark:text-white text-lg"
-        }
-      >
-        Cart
-        <HiShoppingCart className="text-3xl text-[#29276B] hover:text-[#4d4aa4] dark:text-white"></HiShoppingCart>
-      </NavLink> */}
 
-      {/* <Typography
+      <Typography
         onClick={() => toggleTheme()}
         as="li"
         className=" text-3xl text-[#29276B] hover:text-[#4d4aa4] md:-ml-4 font-normal dark:text-white"
       >
         {mood === "light" ? <HiMoon></HiMoon> : <HiSun></HiSun>}
-      </Typography> */}
+      </Typography>
     </ul>
   );
   return (
-    <Navbar
-      data-aos="fade-right"
-      className=" rounded-none shadow py-2 bg-[#ede8e8] dark:bg-[#0F172A]  "
-    >
+    <Navbar className=" bg-transparent rounded-none container mx-auto shadow-none border-none py-2 dark:bg-[#0F172A]  ">
       <div className=" flex items-center justify-between text-blue-gray-900">
         <div className="-ml-6 mr-4 md:mr-0 md:-ml-0 ">
           <Link>
             <img
-              className="w-32 h-14 md:w-36 md:h-16"
+              className="w-40 h-14 md:w-10/12 md:h-16 rounded-md"
               src={logo}
-              alt="navj-logo"
+              alt="nav-logo"
             />
           </Link>
         </div>
@@ -172,7 +174,7 @@ const NavBar = () => {
           )} */}
           <Link to="/login">
             <Button
-              className="hidden md:block bg-[#29276B] hover:bg-[#3b2b94]  rounded-md  font-semibold text-base text-[#fff]"
+              className="hidden md:block bg-[#FF7F56]  rounded-md  font-semibold text-base text-[#fff]"
               size="sm"
             >
               <span>Login</span>
@@ -182,7 +184,7 @@ const NavBar = () => {
 
         <IconButton
           variant="text"
-          className="ml-2 h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden dark:text-white"
+          className="ml-2 h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-[#FF7F56] dark:text-white"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -238,7 +240,7 @@ const NavBar = () => {
             </Link>
           )} */}
           <Link to="/login">
-            <Button size="sm" fullWidth className="mb-2 bg-[#29276B]">
+            <Button size="sm" fullWidth className="mb-2 bg-[#FF7F56]">
               <span>Login</span>
             </Button>
           </Link>
