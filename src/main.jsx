@@ -8,6 +8,9 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import "./index.css";
+import AuthProviders from "./Providers/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import AddBooks from "./components/layout/AddBooks";
 
 const router = createBrowserRouter([
   {
@@ -28,14 +31,21 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
+      {
+        path: "/add-books",
+        element: <AddBooks></AddBooks>,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <AuthProviders>
+      <ThemeProvider>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </AuthProviders>
+    <ToastContainer></ToastContainer>
   </React.StrictMode>
 );

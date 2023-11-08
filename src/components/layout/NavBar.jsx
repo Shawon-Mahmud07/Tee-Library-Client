@@ -6,22 +6,28 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { HiMoon, HiSun } from "react-icons/hi";
-import { Link, NavLink } from "react-router-dom";
-// import userDefaultPicture from "../assets/Img/user.png";
+import { Link, NavLink, Navigate } from "react-router-dom";
 import logo from "../../assets/Logo.png";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from "react-toastify";
 
-// import { AuthContext } from "../Providers/AuthProvider";
 const NavBar = () => {
   const [openNav, setOpenNav] = React.useState(false);
-  // {
-  //   const { user, logOut } = useContext(AuthContext);
-  // console.log(user);
-  // }
 
-  /* const handleLogOut = () => {
-  logOut();
-}; */
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("Sign-out successful.");
+        Navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   // Dark Mood
   const [mood, setMood] = useState("light");
@@ -135,7 +141,25 @@ const NavBar = () => {
         <div className="hidden lg:block">{navList}</div>
         <div className="flex  items-center gap-2">
           {" "}
-          {/* {user ? (
+          {user ? (
+            <Button
+              onClick={handleLogOut}
+              className="hidden md:block bg-[#FF7F56]  rounded-md  font-semibold text-base text-[#fff]"
+              size="sm"
+            >
+              <span>Log Out</span>
+            </Button>
+          ) : (
+            <Link to="/login">
+              <Button
+                className="hidden md:block bg-[#FF7F56]  rounded-md  font-semibold text-base text-[#fff]"
+                size="sm"
+              >
+                <span>Login</span>
+              </Button>
+            </Link>
+          )}
+          {user && (
             <div className="flex  md:flex-col justify-center items-center">
               <img
                 src={user.photoURL}
@@ -146,39 +170,7 @@ const NavBar = () => {
                 {user ? user.displayName : ""}
               </Typography>
             </div>
-          ) : (
-            <img
-              // src={userDefaultPicture}
-              alt="Profile"
-              className="h-7 md:h-10 w-7 md:w-10 rounded-full mr-2"
-            />
-          )} */}
-          {/* {user ? (
-            <Button
-              onClick={handleLogOut}
-              className="hidden md:block bg-[#29276B] hover:bg-[#3b2b94 rounded-md  font-semibold text-base text-[#fff]"
-              size="sm"
-            >
-              <span>Log Out</span>
-            </Button>
-          ) : (
-            <Link to="/login">
-              <Button
-                className="hidden md:block bg-[#29276B] hover:bg-[#3b2b94]  rounded-md  font-semibold text-base text-[#fff]"
-                size="sm"
-              >
-                <span>Login</span>
-              </Button>
-            </Link>
-          )} */}
-          <Link to="/login">
-            <Button
-              className="hidden md:block bg-[#FF7F56]  rounded-md  font-semibold text-base text-[#fff]"
-              size="sm"
-            >
-              <span>Login</span>
-            </Button>
-          </Link>
+          )}
         </div>
 
         <IconButton
@@ -222,27 +214,22 @@ const NavBar = () => {
       <Collapse open={openNav}>
         <div className="container mx-auto">
           {navList}
-          {/* {user ? (
+          {user ? (
             <Button
-              // onClick={handleLogOut}
+              onClick={handleLogOut}
               size="sm"
               fullWidth
-              className="mb-2 bg-[#29276B]"
+              className="mb-2 bg-[#FF7F56]"
             >
               <span>Log out</span>
             </Button>
           ) : (
             <Link to="/login">
-              <Button size="sm" fullWidth className="mb-2 bg-[#29276B]">
+              <Button size="sm" fullWidth className="mb-2 bg-[#FF7F56]">
                 <span>Login</span>
               </Button>
             </Link>
-          )} */}
-          <Link to="/login">
-            <Button size="sm" fullWidth className="mb-2 bg-[#FF7F56]">
-              <span>Login</span>
-            </Button>
-          </Link>
+          )}
         </div>
       </Collapse>
     </Navbar>

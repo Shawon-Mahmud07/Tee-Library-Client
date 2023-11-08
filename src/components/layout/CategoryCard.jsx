@@ -11,7 +11,7 @@ const CategoryCard = ({ categories }) => {
   const { category, image_url } = categories;
   return (
     <div>
-      <Card className="w-72">
+      <Card className="w-72 dark:bg-[#535f78]">
         <CardHeader shadow={false} floated={false} className="h-72">
           <img
             src={image_url}
@@ -21,7 +21,7 @@ const CategoryCard = ({ categories }) => {
         </CardHeader>
         <CardBody>
           <div className="mb-2">
-            <Typography color="blue-gray" className="font-medium">
+            <Typography className="dark:text-white font-medium">
               {category}
             </Typography>
           </div>

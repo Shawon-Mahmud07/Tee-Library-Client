@@ -6,6 +6,7 @@ import MeetupFeature from "../components/layout/MeetupFeature";
 
 const Home = () => {
   const bookCategories = useLoaderData();
+
   return (
     <div className="w-full max-w-[1440px] mx-auto">
       <Banner></Banner>
