@@ -11,6 +11,7 @@ import "./index.css";
 import AuthProviders from "./Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import AddBooks from "./components/layout/AddBooks";
+import PrivetRoute from "./PrivetRoute/PrivetRoute";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-books",
-        element: <AddBooks></AddBooks>,
+        element: (
+          <PrivetRoute>
+            <AddBooks></AddBooks>
+          </PrivetRoute>
+        ),
       },
     ],
   },
