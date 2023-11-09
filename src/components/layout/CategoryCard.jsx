@@ -7,6 +7,7 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 const CategoryCard = ({ categories }) => {
   const { category, image_url } = categories;
   return (
@@ -27,13 +28,15 @@ const CategoryCard = ({ categories }) => {
           </div>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button
-            ripple={false}
-            fullWidth={true}
-            className="bg-[#FF7F56] text-white shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-          >
-            Explore
-          </Button>
+          <Link to={`/explore/${category}`}>
+            <Button
+              ripple={false}
+              fullWidth={true}
+              className="bg-[#FF7F56] text-white shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+            >
+              Explore
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </div>

@@ -13,6 +13,7 @@ const AddBooks = () => {
     const ratings = form.ratings.value;
     const photo = form.photo.value;
     const details = form.details.value;
+    const quantity = form.quantity.value;
     const newBook = {
       name,
       authorName,
@@ -20,6 +21,7 @@ const AddBooks = () => {
       ratings,
       photo,
       details,
+      quantity,
     };
     console.log(newBook);
 
@@ -103,7 +105,6 @@ const AddBooks = () => {
                     name="ratings"
                     required
                   >
-                    <option value="0">0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -115,13 +116,22 @@ const AddBooks = () => {
             </div>
 
             <div className="my-5">
-              <div>
-                <div className=" w-9/12 mx-auto md:w-full  md:px-4">
+              <div className="flex flex-col gap-3 md:gap-0 md:flex-row">
+                <div className=" w-9/12 mx-auto md:w-1/2 md:px-3">
                   <h2 className="mb-3">Photo</h2>
                   <Input
                     className="bg-[#FFFFFF]"
                     name="photo"
                     label="Enter photo URL"
+                    required
+                  />
+                </div>
+                <div className=" w-9/12 mx-auto md:w-1/2 md:px-3">
+                  <h2 className="mb-3">Quantity</h2>
+                  <Input
+                    className="bg-[#FFFFFF]"
+                    name="quantity"
+                    label="Enter quantity"
                     required
                   />
                 </div>

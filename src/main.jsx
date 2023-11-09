@@ -12,6 +12,8 @@ import AuthProviders from "./Providers/AuthProvider";
 import { ToastContainer } from "react-toastify";
 import AddBooks from "./components/layout/AddBooks";
 import PrivetRoute from "./PrivetRoute/PrivetRoute";
+import Explore from "./components/layout/Explore";
+import AllBooks from "./Pages/AllBooks";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,26 @@ const router = createBrowserRouter([
             <AddBooks></AddBooks>
           </PrivetRoute>
         ),
+      },
+      {
+        path: "/explore/:category",
+        element: (
+          <PrivetRoute>
+            <Explore></Explore>
+          </PrivetRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/explore/${params.category}`),
+      },
+      {
+        path: "/all-books",
+        element: (
+          <PrivetRoute>
+            <AllBooks></AllBooks>
+          </PrivetRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/explore/${params.category}`),
       },
     ],
   },
