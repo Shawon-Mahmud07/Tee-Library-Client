@@ -47,7 +47,7 @@ const DetailsBook = () => {
 
   const handleBorrow = () => {
     // send data to the server
-    fetch("http://localhost:5000/borrow-book", {
+    fetch("https://tee-library-server.vercel.app/read-book/borrow-book", {
       method: "POST",
       headers: {
         "content-type": "application/json",

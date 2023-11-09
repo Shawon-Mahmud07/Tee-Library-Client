@@ -30,8 +30,7 @@ const BorrowedCard = ({ card, cardData, setCardData }) => {
             console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Your Book has been Returned.", "success");
-              const remaining = cardData?.filter((data) => data._id !== _id);
-              console.log(remaining);
+              const remaining = cardData.filter((data) => data._id !== _id);
               setCardData(remaining);
             }
           });
