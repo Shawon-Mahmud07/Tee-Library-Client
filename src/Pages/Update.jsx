@@ -169,7 +169,7 @@ const Update = () => {
                 className="bg-[#FF7F56] text-white "
                 fullWidth
               >
-                Update Book
+                Submit
               </Button>
             </div>
           </Form>

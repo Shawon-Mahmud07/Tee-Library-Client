@@ -11,7 +11,7 @@ import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
 
 const ExploreBooks = ({ exploreBook }) => {
-  const { name, authorName, category, ratings, photo, quantity } =
+  const { _id, name, authorName, category, ratings, photo, quantity } =
     exploreBook || {};
 
   return (
@@ -58,7 +58,7 @@ const ExploreBooks = ({ exploreBook }) => {
           </div>
         </CardBody>
         <CardFooter className="pt-0">
-          <Link to="/book-details">
+          <Link to={`/book-details/${_id}`}>
             <Button
               ripple={false}
               fullWidth={true}

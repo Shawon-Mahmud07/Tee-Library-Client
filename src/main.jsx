@@ -15,6 +15,8 @@ import PrivetRoute from "./PrivetRoute/PrivetRoute";
 import Explore from "./components/layout/Explore";
 import AllBooks from "./Pages/AllBooks";
 import Update from "./Pages/Update";
+import DetailsBook from "./Pages/DetailsBook";
+import ReadBook from "./Pages/ReadBook";
 
 const router = createBrowserRouter([
   {
@@ -71,6 +73,22 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/explore/id/${params.id}`),
+      },
+      {
+        path: "/book-details/:id",
+        element: (
+          <PrivetRoute>
+            <DetailsBook></DetailsBook>
+          </PrivetRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/explore/id/${params.id}`),
+      },
+      {
+        path: "/read-book/:name",
+        element: <ReadBook></ReadBook>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/read-book/${params.name}`),
       },
     ],
   },
