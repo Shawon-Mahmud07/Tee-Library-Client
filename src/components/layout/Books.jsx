@@ -8,8 +8,10 @@ import {
   Button,
 } from "@material-tailwind/react";
 import ReactStars from "react-rating-stars-component";
+import { Link } from "react-router-dom";
 const Books = ({ books }) => {
-  const { name, authorName, category, ratings, photo, quantity } = books || {};
+  const { _id, name, authorName, category, ratings, photo, quantity } =
+    books || {};
   return (
     <div>
       <Card className="w-72 dark:bg-[#535f78]">
@@ -54,13 +56,15 @@ const Books = ({ books }) => {
           </div>
         </CardBody>
         <CardFooter className="pt-0">
-          <Button
-            ripple={false}
-            fullWidth={true}
-            className="bg-[#FF7F56] text-white shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-          >
-            Update
-          </Button>
+          <Link to={`/update/${_id}`}>
+            <Button
+              ripple={false}
+              fullWidth={true}
+              className="bg-[#FF7F56] text-white shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
+            >
+              Update
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </div>
