@@ -26,7 +26,7 @@ const AddBooks = () => {
     console.log(newBook);
 
     // send data to the server
-    fetch("http://localhost:5000/add-book", {
+    fetch("https://tee-library-server.vercel.app/add-book", {
       method: "POST",
       headers: {
         "content-type": "application/json",

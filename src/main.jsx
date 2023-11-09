@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/categories"),
+        loader: () => fetch("https://tee-library-server.vercel.app/categories"),
       },
       {
         path: "/register",
@@ -54,7 +54,9 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/explore/${params.category}`),
+          fetch(
+            `https://tee-library-server.vercel.app/explore/${params.category}`
+          ),
       },
       {
         path: "/all-books",
@@ -63,7 +65,7 @@ const router = createBrowserRouter([
             <AllBooks></AllBooks>
           </PrivetRoute>
         ),
-        loader: () => fetch("http://localhost:5000/all-books"),
+        loader: () => fetch("https://tee-library-server.vercel.app/all-books"),
       },
       {
         path: "/update/:id",
@@ -73,7 +75,9 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/explore/id/${params.id}`),
+          fetch(
+            `https://tee-library-server.vercel.app/explore/id/${params.id}`
+          ),
       },
       {
         path: "/book-details/:id",
@@ -83,13 +87,17 @@ const router = createBrowserRouter([
           </PrivetRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/explore/id/${params.id}`),
+          fetch(
+            `https://tee-library-server.vercel.app/explore/id/${params.id}`
+          ),
       },
       {
         path: "/read-book/:name",
         element: <ReadBook></ReadBook>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/read-book/${params.name}`),
+          fetch(
+            `https://tee-library-server.vercel.app/read-book/${params.name}`
+          ),
       },
       {
         path: "/borrowed-books",

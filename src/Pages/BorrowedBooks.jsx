@@ -7,7 +7,7 @@ const BorrowedBooks = () => {
   const { user } = useContext(AuthContext);
   const [cardData, setCardData] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/borrowed-books/${user?.email}`)
+    fetch(`https://tee-library-server.vercel.app/borrowed-books/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setCardData(data));
   }, [user?.email]);
