@@ -1,8 +1,37 @@
-# React + Vite
+# Tee's Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Visit Our Website: https://tee-library007.netlify.app/
 
-Currently, two official plugins are available:
+- ### Book Catalog Management:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  "Tee's Library" allows users to efficiently manage a catalog of books. Users
+  can add new books to the library, update existing book details, and categorize
+  books based on genres or themes. This feature ensures that the library's
+  collection is well-organized and up-to-date.
+
+- ### Borrowing and Returning Books:
+
+  Users can easily borrow books from the library by selecting the desired title
+  and specifying the borrowing period. The application tracks borrowed books and
+  sends reminders for return dates. When users are done with a book, they can
+  initiate the return process seamlessly.
+
+- ### Category-Based Navigation:
+
+  The application offers a user-friendly interface for navigating through
+  different book categories. Users can explore books by genre, author, or other
+  customizable criteria, making it convenient to find books of interest.
+
+- ### User Account Management:
+
+  "Tee's Library" provides user account functionality, allowing individuals to
+  create profiles, log in, and personalize their experience. Registered users
+  can view their borrowing history, manage their borrowed books, and receive
+  personalized recommendations.
+
+- ### Search and Filtering:
+
+  Users can search for specific books or authors using a powerful search
+  feature. The application also offers advanced filtering options to refine
+  search results based on criteria such as publication date, popularity, or
+  availability.
