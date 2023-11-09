@@ -59,8 +59,7 @@ const router = createBrowserRouter([
             <AllBooks></AllBooks>
           </PrivetRoute>
         ),
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/explore/${params.category}`),
+        loader: () => fetch("http://localhost:5000/all-books"),
       },
     ],
   },
