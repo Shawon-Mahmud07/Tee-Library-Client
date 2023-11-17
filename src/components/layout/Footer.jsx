@@ -60,9 +60,8 @@ const Footer = () => {
               variant="small"
               className="mb-4 text-center font-normal text-blue-gray-900 dark:text-white md:mb-0"
             >
-              &copy; {currentYear}{" "}
-              <a href="https://material-tailwind.com/">Tee's Library</a>. All
-              Rights Reserved.
+              &copy; {currentYear} <a href="#">Tee's Library</a>. All Rights
+              Reserved.
             </Typography>
             <div className="flex gap-4 text-blue-gray-900 dark:text-white sm:justify-center">
               <Typography

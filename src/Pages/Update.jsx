@@ -30,7 +30,7 @@ const Update = () => {
     };
 
     // update data to the server
-    fetch(`https://tee-library-server.vercel.app/read-book/update/${_id}`, {
+    fetch(`https://tee-library-server.vercel.app/update/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
