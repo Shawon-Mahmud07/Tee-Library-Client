@@ -13,7 +13,7 @@ import { HiEyeOff, HiEye } from "react-icons/hi";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
-import { AuthContext } from "../Providers/AuthProvider";
+import { AuthContext } from "../Providers/AuthProviders";
 
 const Register = () => {
   const { userCreate } = useContext(AuthContext);
@@ -88,6 +88,7 @@ const Register = () => {
         }
       });
   };
+
   return (
     <div>
       <div className="mt-10 mb-5 md:mb-20 flex justify-center ">

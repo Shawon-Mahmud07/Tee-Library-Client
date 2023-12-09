@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../Providers/AuthProvider";
+import { AuthContext } from "../Providers/AuthProviders";
 import BorrowedCard from "../components/layout/BorrowedCard";
 import emptyCard from "../assets/empty.png";
 

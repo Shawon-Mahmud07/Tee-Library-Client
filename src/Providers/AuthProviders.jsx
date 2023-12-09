@@ -9,8 +9,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
-// import { toast } from "react-toastify";
-// import { Navigate } from "react-router-dom";
+
 import app from "../firebase/firebase.config";
 const auth = getAuth(app);
 

@@ -10,7 +10,7 @@ import React, { useContext } from "react";
 import { Dialog, DialogBody, DialogFooter } from "@material-tailwind/react";
 
 import ReactStars from "react-rating-stars-component";
-import { AuthContext } from "../Providers/AuthProvider";
+import { AuthContext } from "../Providers/AuthProviders";
 import Swal from "sweetalert2";
 
 const DetailsBook = () => {

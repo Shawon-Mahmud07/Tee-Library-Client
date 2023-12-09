@@ -8,7 +8,7 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import "./index.css";
-import AuthProviders from "./Providers/AuthProvider";
+import AuthProviders from "./Providers/AuthProviders";
 import { ToastContainer } from "react-toastify";
 import AddBooks from "./components/layout/AddBooks";
 import PrivetRoute from "./PrivetRoute/PrivetRoute";

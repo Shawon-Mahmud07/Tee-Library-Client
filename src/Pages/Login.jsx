@@ -16,9 +16,11 @@ import {
 } from "@material-tailwind/react";
 
 import { GoogleAuthProvider } from "firebase/auth";
-import { AuthContext } from "../Providers/AuthProvider";
+import { AuthContext } from "../Providers/AuthProviders";
 
 const Login = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const { userSignIn, handleGoogleSignIn } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,8 +30,6 @@ const Login = () => {
   const showPassword = () => {
     setShowPassword(!passwordIcon);
   };
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const handleClick = () => {
     const trimmedEmail = email.trim();
@@ -72,7 +72,7 @@ const Login = () => {
   };
   return (
     <div>
-      <div className="mb-5 md:mb-20 ">
+      <div className="mb-5 md:mb-20">
         <div className="mt-10 flex justify-center ">
           <Card className="w-96 ">
             <CardHeader

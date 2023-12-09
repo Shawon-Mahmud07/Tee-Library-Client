@@ -35,3 +35,10 @@
   feature. The application also offers advanced filtering options to refine
   search results based on criteria such as publication date, popularity, or
   availability.
+
+## Technologies Used:
+
+- **Frontend:** JavaScript, TailwindCSS, React.js, Material Tailwind.
+- **Server:** Node.js, Express.js
+
+- **Authentication:** Firebase
