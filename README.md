@@ -2,12 +2,10 @@
 
 ### Visit Our Website: https://tee-library007.netlify.app/
 
-- ### Book Catalog Management:
-
-  "Tee's Library" allows users to efficiently manage a catalog of books. Users
-  can add new books to the library, update existing book details, and categorize
-  books based on genres or themes. This feature ensures that the library's
-  collection is well-organized and up-to-date.
+"Tee's Library" allows users to efficiently manage a catalog of books. Users can
+add new books to the library, update existing book details, and categorize books
+based on genres or themes. This feature ensures that the library's collection is
+well-organized and up-to-date.
 
 - ### Borrowing and Returning Books:
 
